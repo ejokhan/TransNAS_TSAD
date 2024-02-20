@@ -1,0 +1,1198 @@
+SMAP:  Trial 3 finished with values: [0.9189139405275458, -375555.0] and parameters: {'lr': 1.4109443283462657e-05, 'dropout_rate': 0.1755720259905254, 'dim_feedforward': 95, 'batch': 16, 'encoder_layers': 2, 'decoder_layers': 3, 'activation_function': 'sigmoid', 'time_warping': True, 'time_masking': False, 'gaussian_noise': 0.0004472580884683208, 'use_linear_embedding': False, 'phase_type': '2phase', 'self_conditioning': True, 'layer_norm': False, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 3}. 
+Trial Number: 7 (Trial 7 finished with values: [0.9326633402421077, 78306.0] and parameters: {'lr': 0.003151456826123189, 'dropout_rate': 0.4305067365468159, 'dim_feedforward': 77, 'batch': 64, 'encoder_layers': 1, 'decoder_layers': 2, 'activation_function': 'leaky_relu', 'time_warping': True, 'time_masking': False, 'gaussian_noise': 0.0025879066400618603, 'use_linear_embedding': True, 'phase_type': 'iterative', 'self_conditioning': False, 'layer_norm': False, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 1}. 
+
+)
+
+{'FN': 0,
+ 'FP': 108,
+ 'Hit@100%': 1.0,
+ 'Hit@150%': 1.0,
+ 'NDCG@100%': 1.0,
+ 'NDCG@150%': 1.0,
+ 'ROC/AUC': 0.9930385458295733,
+ 'TN': 7649,
+ 'TP': 748,
+ 'f1': 0.9326633402421077,
+ 'precision': 0.8738317654926195,
+ 'recall': 0.9999999866310163,
+ 'threshold': 0.040767982262028525}
+
+  Value for F1: 0.9326633402421077
+  Number of Parameters: -78306.0
+  Params: 
+    lr: 0.003151456826123189
+    dropout_rate: 0.4305067365468159
+    dim_feedforward: 77
+    batch: 64
+    encoder_layers: 1
+    decoder_layers: 2
+    activation_function: leaky_relu
+    time_warping: True
+    time_masking: False
+    gaussian_noise: 0.0025879066400618603
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: False
+    layer_norm: False
+    positional_encoding_type: fourier
+    num_ffn_layers: 1
+
+Trial Number: 10 ( Trial 10 finished with values: [0.9462315616484884, 103479.0] and parameters: {'lr': 0.00021281700905323122, 'dropout_rate': 0.2353371090727513, 'dim_feedforward': 101, 'batch': 32, 'encoder_layers': 2, 'decoder_layers': 1, 'activation_function': 'sigmoid', 'time_warping': False, 'time_masking': True, 'gaussian_noise': 0.0001510559032731608, 'use_linear_embedding': False, 'phase_type': '2phase', 'self_conditioning': False, 'layer_norm': False, 'positional_encoding_type': 'sinusoidal', 'num_ffn_layers': 1}. 
+)
+
+{'FN': 0,
+ 'FP': 85,
+ 'Hit@100%': 1.0,
+ 'Hit@150%': 1.0,
+ 'NDCG@100%': 1.0,
+ 'NDCG@150%': 1.0,
+ 'ROC/AUC': 0.9945210777362382,
+ 'TN': 7672,
+ 'TP': 748,
+ 'f1': 0.9462315616484884,
+ 'precision': 0.8979591728936475,
+ 'recall': 0.9999999866310163,
+ 'threshold': 0.11468736947157701}
+
+  Value for F1: 0.9462315616484884
+  Number of Parameters: -103479.0
+  Params: 
+    lr: 0.00021281700905323122
+    dropout_rate: 0.2353371090727513
+    dim_feedforward: 101
+    batch: 32
+    encoder_layers: 2
+    decoder_layers: 1
+    activation_function: sigmoid
+    time_warping: False
+    time_masking: True
+    gaussian_noise: 0.0001510559032731608
+    use_linear_embedding: False
+    phase_type: 2phase
+    self_conditioning: False
+    layer_norm: False
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 1
+
+Trial Number: 14 (Trial 14 finished with values: [0.9510439509639704, 106029.0] and parameters: {'lr': 0.00046804379049615705, 'dropout_rate': 0.12297660123174858, 'dim_feedforward': 126, 'batch': 128, 'encoder_layers': 3, 'decoder_layers': 1, 'activation_function': 'tanh', 'time_warping': True, 'time_masking': False, 'gaussian_noise': 0.001415549158217021, 'use_linear_embedding': True, 'phase_type': 'iterative', 'self_conditioning': False, 'layer_norm': True, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 1}. 
+)
+
+{'FN': 0,
+ 'FP': 77,
+ 'Hit@100%': 1.0,
+ 'Hit@150%': 1.0,
+ 'NDCG@100%': 1.0,
+ 'NDCG@150%': 1.0,
+ 'ROC/AUC': 0.9950367410081217,
+ 'TN': 7680,
+ 'TP': 748,
+ 'f1': 0.9510439509639704,
+ 'precision': 0.9066666556767679,
+ 'recall': 0.9999999866310163,
+ 'threshold': 0.08382507249156276}
+
+  Value for F1: 0.9510439509639704
+  Number of Parameters: -106029.0
+  Params: 
+    lr: 0.00046804379049615705
+    dropout_rate: 0.12297660123174858
+    dim_feedforward: 126
+    batch: 128
+    encoder_layers: 3
+    decoder_layers: 1
+    activation_function: tanh
+    time_warping: True
+    time_masking: False
+    gaussian_noise: 0.001415549158217021
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: False
+    layer_norm: True
+    positional_encoding_type: fourier
+    num_ffn_layers: 1
+
+Trial Number: 20 (Trial 20 finished with values: [0.9274593669727764, 37857.0] and parameters: {'lr': 0.007404340064880197, 'dropout_rate': 0.3865604406011236, 'dim_feedforward': 8, 'batch': 96, 'encoder_layers': 1, 'decoder_layers': 1, 'activation_function': 'leaky_relu', 'time_warping': True, 'time_masking': False, 'gaussian_noise': 0.015618116987090182, 'use_linear_embedding': True, 'phase_type': 'iterative', 'self_conditioning': True, 'layer_norm': False, 'positional_encoding_type': 'sinusoidal', 'num_ffn_layers': 2}. 
+)
+
+{'FN': 0,
+ 'FP': 117,
+ 'Hit@100%': 1.0,
+ 'Hit@150%': 1.0,
+ 'NDCG@100%': 1.0,
+ 'NDCG@150%': 1.0,
+ 'ROC/AUC': 0.9924584246487044,
+ 'TN': 7640,
+ 'TP': 748,
+ 'f1': 0.9274593669727764,
+ 'precision': 0.8647398743960708,
+ 'recall': 0.9999999866310163,
+ 'threshold': 0.012574981901025196}
+25
+
+  Value for F1: 0.9274593669727764
+  Number of Parameters: -37857.0
+  Params: 
+    lr: 0.007404340064880197
+    dropout_rate: 0.3865604406011236
+    dim_feedforward: 8
+    batch: 96
+    encoder_layers: 1
+    decoder_layers: 1
+    activation_function: leaky_relu
+    time_warping: True
+    time_masking: False
+    gaussian_noise: 0.015618116987090182
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: True
+    layer_norm: False
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 2
+
+Trial Number: 58 (Trial 58 finished with values: [0.940284132368876, 79897.0] and parameters: {'lr': 0.008148167206082933, 'dropout_rate': 0.4826624194041188, 'dim_feedforward': 124, 'batch': 128, 'encoder_layers': 2, 'decoder_layers': 1, 'activation_function': 'tanh', 'time_warping': True, 'time_masking': False, 'gaussian_noise': 0.053328487429632254, 'use_linear_embedding': False, 'phase_type': 'iterative', 'self_conditioning': True, 'layer_norm': True, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 1}. 
+)
+
+{'FN': 0,
+ 'FP': 95,
+ 'Hit@100%': 1.0,
+ 'Hit@150%': 1.0,
+ 'NDCG@100%': 1.0,
+ 'NDCG@150%': 1.0,
+ 'ROC/AUC': 0.9938764986463838,
+ 'TN': 7662,
+ 'TP': 748,
+ 'f1': 0.940284132368876,
+ 'precision': 0.8873072255360946,
+ 'recall': 0.9999999866310163,
+ 'threshold': 0.0398425684404271}
+25
+
+  Value for F1: 0.940284132368876
+  Number of Parameters: -79897.0
+  Params: 
+    lr: 0.008148167206082933
+    dropout_rate: 0.4826624194041188
+    dim_feedforward: 124
+    batch: 128
+    encoder_layers: 2
+    decoder_layers: 1
+    activation_function: tanh
+    time_warping: True
+    time_masking: False
+    gaussian_noise: 0.053328487429632254
+    use_linear_embedding: False
+    phase_type: iterative
+    self_conditioning: True
+    layer_norm: True
+    positional_encoding_type: fourier
+    num_ffn_layers: 1
+
+Trial Number: 74 (Trial 74 finished with values: [0.9426541098164691, 90700.0] and parameters: {'lr': 0.0026640310823343185, 'dropout_rate': 0.27293206661641484, 'dim_feedforward': 35, 'batch': 32, 'encoder_layers': 3, 'decoder_layers': 2, 'activation_function': 'tanh', 'time_warping': True, 'time_masking': True, 'gaussian_noise': 0.02035433512458904, 'use_linear_embedding': False, 'phase_type': 'iterative', 'self_conditioning': False, 'layer_norm': True, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 1}. 
+{'FN': 0,
+ 'FP': 91,
+ 'Hit@100%': 1.0,
+ 'Hit@150%': 1.0,
+ 'NDCG@100%': 1.0,
+ 'NDCG@150%': 1.0,
+ 'ROC/AUC': 0.9941343302823256,
+ 'TN': 7666,
+ 'TP': 748,
+ 'f1': 0.9426541098164691,
+ 'precision': 0.8915375340698745,
+ 'recall': 0.9999999866310163,
+ 'threshold': 0.05315953338047712}
+
+  Value for F1: 0.9426541098164691
+  Number of Parameters: -90700.0
+  Params: 
+    lr: 0.0026640310823343185
+    dropout_rate: 0.27293206661641484
+    dim_feedforward: 35
+    batch: 32
+    encoder_layers: 3
+    decoder_layers: 2
+    activation_function: tanh
+    time_warping: True
+    time_masking: True
+    gaussian_noise: 0.02035433512458904
+    use_linear_embedding: False
+    phase_type: iterative
+    self_conditioning: False
+    layer_norm: True
+    positional_encoding_type: fourier
+    num_ffn_layers: 1
+.................................................................................
+UCR: Params: 
+    lr: 0.08042928852931656
+    dropout_rate: 0.2625375822546474
+    dim_feedforward: 121
+    batch: 32
+    encoder_layers: 2
+    decoder_layers: 3
+    activation_function: tanh
+    time_warping: False
+    time_masking: False
+    gaussian_noise: 0.0027309589061422297
+    use_linear_embedding: False
+    phase_type: 2phase
+    self_conditioning: False
+    layer_norm: False
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 3
+
+Trial 92 finished with values: [0.999994909934918, -1995.0] and parameters: {'lr': 0.001999752227224363, 'dropout_rate': 0.44740636617497487, 'dim_feedforward': 124, 'batch': 48, 'encoder_layers': 1, 'decoder_layers': 2, 'activation_function': 'leaky_relu', 'time_warping': True, 'time_masking': True, 'gaussian_noise': 0.027956473148717333, 'use_linear_embedding': True, 'phase_type': 'iterative', 'self_conditioning': True, 'layer_norm': False, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 1}.
+Trial 99 finished with values: [0.9736791286036708, -4574.0] and parameters: {'lr': 0.08042928852931656, 'dropout_rate': 0.2625375822546474, 'dim_feedforward': 121, 'batch': 32, 'encoder_layers': 1, 'decoder_layers': 3, 'activation_function': 'leaky_relu', 'time_warping': False, 'time_masking': False, 'gaussian_noise': 0.0027309589061422297, 'use_linear_embedding': True, 'phase_type': '2phase', 'self_conditioning': False, 'layer_norm': True, 'positional_encoding_type': 'sinusoidal', 'num_ffn_layers': 1}.
+
+         f1  precision  recall     TP      TN   FP   FN   ROC/AUC  threshold
+0  0.991066   0.982301     1.0  111.0  5787.0  2.0  0.0  0.999827   0.001571
+{'FN': 0,
+ 'FP': 2,
+ 'Hit@100%': 1.0,
+ 'Hit@150%': 1.0,
+ 'ROC/AUC': 0.9998272585938849,
+ 'TN': 5787,
+ 'TP': 111,
+ 'f1': 0.9910663405067339,
+ 'precision': 0.9823007980264781,
+ 'recall': 0.999999909909918,
+ 'threshold': 0.0015713025737918418}
+1
+
+Best trials on the Pareto front:
+Trial Number: 0
+  Value for F1: 0.9910663405067339
+  Number of Parameters: -1690.0
+  Params: 
+    lr: 0.005942922965420524
+    dropout_rate: 0.3187256380469774
+    dim_feedforward: 105
+    batch: 48
+    encoder_layers: 2
+    decoder_layers: 1
+    activation_function: leaky_relu
+    time_warping: True
+    time_masking: True
+    gaussian_noise: 0.00042317302142263927
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: False
+    layer_norm: True
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 1
+Trial Number: 27
+  Value for F1: 0.9527846289564811
+  Number of Parameters: -1293.0
+  Params: 
+    lr: 0.0034622888061300087
+    dropout_rate: 0.11031671485423256
+    dim_feedforward: 17
+    batch: 64
+    encoder_layers: 2
+    decoder_layers: 2
+    activation_function: leaky_relu
+    time_warping: True
+    time_masking: False
+    gaussian_noise: 0.00032881465329825027
+    use_linear_embedding: True
+    phase_type: 2phase
+    self_conditioning: False
+    layer_norm: False
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 2
+Trial Number: 33
+  Value for F1: 0.6851806384611954
+  Number of Parameters: -816.0
+  Params: 
+    lr: 0.00736835276725967
+    dropout_rate: 0.16823946694182923
+    dim_feedforward: 25
+    batch: 112
+    encoder_layers: 3
+    decoder_layers: 1
+    activation_function: tanh
+    time_warping: False
+    time_masking: True
+    gaussian_noise: 0.0010920289224161446
+    use_linear_embedding: True
+    phase_type: 2phase
+    self_conditioning: True
+    layer_norm: True
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 1
+Trial Number: 34
+  Value for F1: 0.7844474737144725
+  Number of Parameters: -1191.0
+  Params: 
+    lr: 0.008677559173195747
+    dropout_rate: 0.22996013392912396
+    dim_feedforward: 40
+    batch: 112
+    encoder_layers: 3
+    decoder_layers: 2
+    activation_function: relu
+    time_warping: True
+    time_masking: False
+    gaussian_noise: 0.0006652049949237063
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: False
+    layer_norm: True
+    positional_encoding_type: fourier
+    num_ffn_layers: 1
+Trial Number: 60
+  Value for F1: 0.8072678543096793
+  Number of Parameters: -1206.0
+  Params: 
+    lr: 0.005942922965420524
+    dropout_rate: 0.3187256380469774
+    dim_feedforward: 73
+    batch: 48
+    encoder_layers: 2
+    decoder_layers: 1
+    activation_function: relu
+    time_warping: True
+    time_masking: True
+    gaussian_noise: 0.00042317302142263927
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: False
+    layer_norm: False
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 1
+Trial Number: 72
+  Value for F1: 0.0
+  Number of Parameters: -641.0
+  Params: 
+    lr: 0.0028709922142145508
+    dropout_rate: 0.2966549450575281
+    dim_feedforward: 24
+    batch: 128
+    encoder_layers: 2
+    decoder_layers: 2
+    activation_function: tanh
+    time_warping: False
+    time_masking: False
+    gaussian_noise: 0.00014673478561420768
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: True
+    layer_norm: False
+    positional_encoding_type: fourier
+    num_ffn_layers: 1
+Trial Number: 87
+  Value for F1: 0.757674422794751
+  Number of Parameters: -1011.0
+  Params: 
+    lr: 0.0028547158114924994
+    dropout_rate: 0.4156920457681029
+    dim_feedforward: 8
+    batch: 96
+    encoder_layers: 2
+    decoder_layers: 3
+    activation_function: relu
+    time_warping: False
+    time_masking: False
+    gaussian_noise: 0.0027935919050456363
+    use_linear_embedding: False
+    phase_type: 2phase
+    self_conditioning: True
+    layer_norm: False
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 2
+
+
+MBA:
+
+Best trials on the Pareto front:
+Trial Number: 3
+
+[I 2023-11-16 16:29:23,516] Trial 3 finished with values: [0.9910374971253099, 1902.0] and parameters: {'lr': 0.003441494569006896, 'dropout_rate': 0.1795420114126578, 'dim_feedforward': 41, 'batch': 16, 'encoder_layers': 3, 'decoder_layers': 1, 'activation_function': 'tanh', 'time_warping': True, 'time_masking': False, 'gaussian_noise': 0.00792473668989539, 'use_linear_embedding': False, 'phase_type': 'iterative', 'self_conditioning': False, 'layer_norm': False, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 1}. 
+        f1  precision  recall      TP      TN    FP   FN   ROC/AUC  threshold
+0  0.98559   0.971599     1.0  2600.0  5004.0  76.0  0.0  0.992520   0.001106
+1  0.98503   0.970511     1.0  2600.0  5001.0  79.0  0.0  0.992224   0.000475
+{'FN': 0,
+ 'FP': 47,
+ 'Hit@100%': 1.0,
+ 'Hit@150%': 1.0,
+ 'NDCG@100%': 1.0,
+ 'NDCG@150%': 1.0,
+ 'ROC/AUC': 0.9953740157480314,
+ 'TN': 5033,
+ 'TP': 2600,
+ 'f1': 0.9910374971253099,
+ 'precision': 0.9822440461569926,
+ 'recall': 0.999999996153846,
+ 'threshold': 0.0007857234812416754}
+
+  Value for F1: 0.9910374971253099
+  Number of Parameters: -1902.0
+  Params: 
+    lr: 0.003441494569006896
+    dropout_rate: 0.1795420114126578
+    dim_feedforward: 41
+    batch: 16
+    encoder_layers: 3
+    decoder_layers: 1
+    activation_function: tanh
+    time_warping: True
+    time_masking: False
+    gaussian_noise: 0.00792473668989539
+    use_linear_embedding: False
+    phase_type: iterative
+    self_conditioning: False
+    layer_norm: False
+    positional_encoding_type: fourier
+    num_ffn_layers: 1
+Trial Number: 35
+
+[I 2023-11-16 16:55:52,271] Trial 35 finished with values: [0.9800176142334727, 593.0] and parameters: {'lr': 0.002602768276636336, 'dropout_rate': 0.3438980750226384, 'dim_feedforward': 9, 'batch': 112, 'encoder_layers': 2, 'decoder_layers': 1, 'activation_function': 'relu', 'time_warping': False, 'time_masking': False, 'gaussian_noise': 0.05890926400262058, 'use_linear_embedding': False, 'phase_type': 'iterative', 'self_conditioning': True, 'layer_norm': True, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 1}. 
+         f1  precision  recall      TP      TN     FP   FN   ROC/AUC  \
+0  0.967797   0.937613     1.0  2600.0  4907.0  173.0  0.0  0.982972   
+1  0.967977   0.937951     1.0  2600.0  4908.0  172.0  0.0  0.983071   
+
+   threshold  
+0   0.017082  
+1   0.009839  
+{'FN': 0,
+ 'FP': 106,
+ 'Hit@100%': 1.0,
+ 'Hit@150%': 1.0,
+ 'NDCG@100%': 1.0,
+ 'NDCG@150%': 1.0,
+ 'ROC/AUC': 0.9895669291338582,
+ 'TN': 4974,
+ 'TP': 2600,
+ 'f1': 0.9800176142334727,
+ 'precision': 0.9608277865453518,
+ 'recall': 0.999999996153846,
+ 'threshold': 0.014491113727871006}
+2
+
+  Value for F1: 0.9800176142334727
+  Number of Parameters: -593.0
+  Params: 
+    lr: 0.002602768276636336
+    dropout_rate: 0.3438980750226384
+    dim_feedforward: 9
+    batch: 112
+    encoder_layers: 2
+    decoder_layers: 1
+    activation_function: relu
+    time_warping: False
+    time_masking: False
+    gaussian_noise: 0.05890926400262058
+    use_linear_embedding: False
+    phase_type: iterative
+    self_conditioning: True
+    layer_norm: True
+    positional_encoding_type: fourier
+    num_ffn_layers: 1
+Trial Number: 87
+
+[I 2023-11-16 18:19:01,817] Trial 87 finished with values: [0.9807569747889855, 1702.0] and parameters: {'lr': 0.002602768276636336, 'dropout_rate': 0.3438980750226384, 'dim_feedforward': 16, 'batch': 112, 'encoder_layers': 2, 'decoder_layers': 1, 'activation_function': 'sigmoid', 'time_warping': False, 'time_masking': True, 'gaussian_noise': 0.05890926400262058, 'use_linear_embedding': True, 'phase_type': '2phase', 'self_conditioning': True, 'layer_norm': True, 'positional_encoding_type': 'sinusoidal', 'num_ffn_layers': 2}. 
+         f1  precision  recall      TP      TN     FP   FN   ROC/AUC  \
+0  0.965461   0.933238     1.0  2600.0  4894.0  186.0  0.0  0.981693   
+1  0.971958   0.945455     1.0  2600.0  4930.0  150.0  0.0  0.985236   
+
+   threshold  
+0   0.008971  
+1   0.010797  
+{'FN': 0,
+ 'FP': 102,
+ 'Hit@100%': 1.0,
+ 'Hit@150%': 1.0,
+ 'NDCG@100%': 1.0,
+ 'NDCG@150%': 1.0,
+ 'ROC/AUC': 0.9899606299212598,
+ 'TN': 4978,
+ 'TP': 2600,
+ 'f1': 0.9807569747889855,
+ 'precision': 0.9622501814868608,
+ 'recall': 0.999999996153846,
+ 'threshold': 0.009713088135575573}
+
+
+  Value for F1: 0.9807569747889855
+  Number of Parameters: -1702.0
+  Params: 
+    lr: 0.002602768276636336
+    dropout_rate: 0.3438980750226384
+    dim_feedforward: 16
+    batch: 112
+    encoder_layers: 2
+    decoder_layers: 1
+    activation_function: sigmoid
+    time_warping: False
+    time_masking: True
+    gaussian_noise: 0.05890926400262058
+    use_linear_embedding: True
+    phase_type: 2phase
+    self_conditioning: True
+    layer_norm: True
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 2
+
+
+SMAP:
+
+Best trials on the Pareto front:
+Trial Number: 32
+  Value for F1: 0.937338366305568
+  Number of Parameters: -43791.0
+  Params: 
+    lr: 0.008113272415145152
+    dropout_rate: 0.26945507717002337
+    dim_feedforward: 29
+    batch: 32
+    encoder_layers: 1
+    decoder_layers: 1
+    activation_function: leaky_relu
+    time_warping: True
+    time_masking: True
+    gaussian_noise: 0.0004579813049658039
+    use_linear_embedding: False
+    phase_type: iterative
+    self_conditioning: False
+    layer_norm: False
+    positional_encoding_type: fourier
+    num_ffn_layers: 2
+Trial Number: 79
+  Value for F1: 0.9414676295957725
+  Number of Parameters: -50079.0
+  Params: 
+    lr: 0.0065655037634293366
+    dropout_rate: 0.4661255891715781
+    dim_feedforward: 77
+    batch: 96
+    encoder_layers: 1
+    decoder_layers: 1
+    activation_function: sigmoid
+    time_warping: True
+    time_masking: True
+    gaussian_noise: 0.0026677920445792127
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: True
+    layer_norm: False
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 1
+Trial Number: 90
+  Value for F1: 0.9396934988648239
+  Number of Parameters: -48665.0
+  Params: 
+    lr: 0.007658603806806799
+    dropout_rate: 0.4811882048253654
+    dim_feedforward: 70
+    batch: 48
+    encoder_layers: 1
+    decoder_layers: 1
+    activation_function: leaky_relu
+    time_warping: False
+    time_masking: True
+    gaussian_noise: 0.001021841620816645
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: False
+    layer_norm: False
+    positional_encoding_type: fourier
+    num_ffn_layers: 1
+Trial Number: 112
+  Value for F1: 0.9583550220412367
+  Number of Parameters: -109033.0
+  Params: 
+    lr: 0.0028639400445201707
+    dropout_rate: 0.38782439986163164
+    dim_feedforward: 93
+    batch: 32
+    encoder_layers: 1
+    decoder_layers: 1
+    activation_function: leaky_relu
+    time_warping: False
+    time_masking: True
+    gaussian_noise: 0.0006543838146295864
+    use_linear_embedding: False
+    phase_type: 2phase
+    self_conditioning: True
+    layer_norm: True
+    positional_encoding_type: fourier
+    num_ffn_layers: 2
+Trial Number: 120
+  Value for F1: 0.9510439509639704
+  Number of Parameters: -64771.0
+  Params: 
+    lr: 0.0034614424056867927
+    dropout_rate: 0.301792682802645
+    dim_feedforward: 32
+    batch: 96
+    encoder_layers: 1
+    decoder_layers: 2
+    activation_function: sigmoid
+    time_warping: True
+    time_masking: True
+    gaussian_noise: 0.0026677920445792127
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: False
+    layer_norm: True
+    positional_encoding_type: fourier
+    num_ffn_layers: 1
+Trial Number: 130
+  Value for F1: 0.9303432714184082
+  Number of Parameters: -39045.0
+  Params: 
+    lr: 0.00261317605335032
+    dropout_rate: 0.17165703695485535
+    dim_feedforward: 35
+    batch: 32
+    encoder_layers: 1
+    decoder_layers: 1
+    activation_function: leaky_relu
+    time_warping: False
+    time_masking: False
+    gaussian_noise: 0.010953096009955431
+    use_linear_embedding: False
+    phase_type: iterative
+    self_conditioning: False
+    layer_norm: False
+    positional_encoding_type: fourier
+    num_ffn_layers: 1
+Trial Number: 145
+  Value for F1: 0.9338277193723609
+  Number of Parameters: -41393.0
+  Params: 
+    lr: 0.0022878521359487904
+    dropout_rate: 0.4661255891715781
+    dim_feedforward: 34
+    batch: 96
+    encoder_layers: 1
+    decoder_layers: 1
+    activation_function: sigmoid
+    time_warping: False
+    time_masking: True
+    gaussian_noise: 0.0026677920445792127
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: False
+    layer_norm: False
+    positional_encoding_type: fourier
+    num_ffn_layers: 1
+
+
+
+
+SWaT
+
+Number of finished trials:  200
+Best trials on the Pareto front:
+Trial Number: 38
+  Value for F1: 0.8314749349646585
+  Number of Parameters: -5431.0
+  Params: 
+    lr: 4.030790916162421e-05
+    dropout_rate: 0.38362303328901814
+    dim_feedforward: 42
+    batch: 32
+    encoder_layers: 2
+    decoder_layers: 3
+    activation_function: tanh
+    time_warping: True
+    time_masking: True
+    gaussian_noise: 0.05801863740406389
+    use_linear_embedding: False
+    phase_type: 2phase
+    self_conditioning: True
+    layer_norm: True
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 3
+Trial Number: 85
+  Value for F1: 0.8168964836141207
+  Number of Parameters: -3835.0
+  Params: 
+    lr: 0.005530515083598325
+    dropout_rate: 0.12658437152063087
+    dim_feedforward: 82
+    batch: 112
+    encoder_layers: 1
+    decoder_layers: 2
+    activation_function: leaky_relu
+    time_warping: True
+    time_masking: True
+    gaussian_noise: 0.0011308130213836013
+    use_linear_embedding: False
+    phase_type: iterative
+    self_conditioning: True
+    layer_norm: True
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 3
+Trial Number: 190
+  Value for F1: 0.8093898796896878
+  Number of Parameters: -175.0
+  Params: 
+    lr: 0.005530515083598325
+    dropout_rate: 0.12658437152063087
+    dim_feedforward: 9
+    batch: 112
+    encoder_layers: 1
+    decoder_layers: 1
+    activation_function: sigmoid
+    time_warping: True
+    time_masking: True
+    gaussian_noise: 0.0006468311924549781
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: False
+    layer_norm: False
+    positional_encoding_type: fourier
+    num_ffn_layers: 1
+Trial Number: 194
+  Value for F1: 0.81508255249909
+  Number of Parameters: -264.0
+  Params: 
+    lr: 0.0003096644999963382
+    dropout_rate: 0.43926469735205054
+    dim_feedforward: 9
+    batch: 80
+    encoder_layers: 1
+    decoder_layers: 2
+    activation_function: relu
+    time_warping: False
+    time_masking: False
+    gaussian_noise: 0.0006468311924549781
+    use_linear_embedding: False
+    phase_type: iterative
+    self_conditioning: False
+    layer_norm: False
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 1
+
+
+StandALone on SWaT:
+
+Testing TranAD on SWaT
+         f1  precision    recall     TP      TN    FP     FN   ROC/AUC  \
+0  0.846547    0.95155  0.762422  491.0  4331.0  25.0  153.0  0.878342   
+
+   threshold  
+0    0.08422  
+{'FN': 153,
+ 'FP': 25,
+ 'Hit@100%': 1.0,
+ 'Hit@150%': 1.0,
+ 'ROC/AUC': 0.8783415749818911,
+ 'TN': 4331,
+ 'TP': 491,
+ 'f1': 0.8465467704509313,
+ 'precision': 0.9515503691560007,
+ 'recall': 0.7624223484095909,
+ 'threshold': 0.08421960144466357}
+<Figure size 3600x1200 with 0 Axes>
+
+Params
+
+    static_params = {
+    'lr': 0.000004,
+    'dropout_rate': 0.38362303328901814,
+    'dim_feedforward': 42,
+    'batch': 32,
+    'encoder_layers': 2,
+    'decoder_layers': 3,
+    'attention_type': 'scaled_dot_product',
+    'positional_encoding_type': 'sinusoidal',
+    'phase_type': 'iterative',
+    'gaussian_noise_std': 0.05801863740406389,
+    'time_warping': True,
+    'time_masking': True,
+    'self_conditioning': True,
+    'layer_norm': True,
+    'activation_function': 'tanh',
+    'use_linear_embedding': False,
+    'nhead': labels.shape[1],  # Adjust based on your dataset
+    'num_ffn_layers': 3
+}
+
+
+
+
+MSL:
+
+I 2023-11-13 01:57:17,187] Trial 10 finished with values: [0.9779129526870257, 1131911.0] and parameters: {'lr': 0.006192380239600562, 'dropout_rate': 0.3730192987148643, 'dim_feedforward': 121, 'batch': 32, 'encoder_layers': 2, 'decoder_layers': 3, 'activation_function': 'leaky_relu', 'time_warping': True, 'time_masking': True, 'gaussian_noise': 0.0004282871163865118, 'use_linear_embedding': True, 'phase_type': '2phase', 'self_conditioning': True, 'layer_norm': True, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 2}. 
+
+
+
+{'FN': 0,
+ 'FP': 14,
+ 'Hit@100%': 1.0,
+ 'Hit@150%': 1.0,
+ 'NDCG@100%': 1.0000000000000002,
+ 'NDCG@150%': 1.0000000000000002,
+ 'ROC/AUC': 0.9964176049129989,
+ 'TN': 1940,
+ 'TP': 310,
+ 'f1': 0.9779129526870257,
+ 'precision': 0.9567900939262317,
+ 'recall': 0.9999999677419366,
+ 'threshold': 4.365017727109549e+18}
+
+
+Trial 56 finished with values: [0.9494589959667135, 236491.0] and parameters: {'lr': 0.003377502542883706, 'dropout_rate': 0.24492690235133635, 'dim_feedforward': 52, 'batch': 112, 'encoder_layers': 2, 'decoder_layers': 1, 'activation_function': 'sigmoid', 'time_warping': False, 'time_masking': False, 'gaussian_noise': 0.005770591008045851, 'use_linear_embedding': False, 'phase_type': 'iterative', 'self_conditioning': True, 'layer_norm': True, 'positional_encoding_type': 'sinusoidal', 'num_ffn_layers': 1}. 
+
+FN': 0,
+ 'FP': 33,
+ 'Hit@100%': 1.0,
+ 'Hit@150%': 1.0,
+ 'NDCG@100%': 1.0,
+ 'NDCG@150%': 1.0,
+ 'ROC/AUC': 0.9915557830092119,
+ 'TN': 1921,
+ 'TP': 310,
+ 'f1': 0.9494589959667135,
+ 'precision': 0.9037900611139924,
+ 'recall': 0.9999999677419366,
+ 'threshold': 0.036122020215293565}
+
+
+Number of finished trials:  100
+Best trials on the Pareto front:
+Trial Number: 10
+  Value for F1: 0.9779129526870257
+  Number of Parameters: -1131911.0
+  Params: 
+    lr: 0.006192380239600562
+    dropout_rate: 0.3730192987148643
+    dim_feedforward: 121
+    batch: 32
+    encoder_layers: 2
+    decoder_layers: 3
+    activation_function: leaky_relu
+    time_warping: True
+    time_masking: True
+    gaussian_noise: 0.0004282871163865118
+    use_linear_embedding: True
+    phase_type: 2phase
+    self_conditioning: True
+    layer_norm: True
+    positional_encoding_type: fourier
+    num_ffn_layers: 2
+Trial Number: 44
+  Value for F1: 0.9494589959667135
+  Number of Parameters: -297541.0
+  Params: 
+    lr: 0.0022062172204106193
+    dropout_rate: 0.4661800617483248
+    dim_feedforward: 52
+    batch: 128
+    encoder_layers: 1
+    decoder_layers: 1
+    activation_function: leaky_relu
+    time_warping: True
+    time_masking: False
+    gaussian_noise: 0.0005580565697587539
+    use_linear_embedding: True
+    phase_type: 2phase
+    self_conditioning: True
+    layer_norm: True
+    positional_encoding_type: fourier
+    num_ffn_layers: 1
+Trial Number: 55
+  Value for F1: 0.936550883096184
+  Number of Parameters: -236764.0
+  Params: 
+    lr: 0.0015945755391272936
+    dropout_rate: 0.14173693808883994
+    dim_feedforward: 11
+    batch: 48
+    encoder_layers: 2
+    decoder_layers: 1
+    activation_function: leaky_relu
+    time_warping: True
+    time_masking: True
+    gaussian_noise: 0.0012266240173065
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: True
+    layer_norm: True
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 3
+
+
+
+
+
+
+SMD 
+
+Trial 30
+
+Parameters: {'lr': 0.00022730515567918527, 'dropout_rate': 0.1554526372737362, 'dim_feedforward': 86, 'batch': 48, 'encoder_layers': 3, 'decoder_layers': 1, 'activation_function': 'sigmoid', 'time_warping': False, 'time_masking': False, 'gaussian_noise': 0.0006275917152131684, 'use_linear_embedding': True, 'phase_type': '2phase', 'self_conditioning': False, 'layer_norm': True, 'positional_encoding_type': 'sinusoidal', 'num_ffn_layers': 3}
+
+
+F1 Score: 0.9992456519601953
+Number of Parameters: 371,296
+Performance Metrics:
+FN: 0
+FP: 4
+Hit@100%: 0.4403502701563226
+Hit@150%: 0.5686499009052439
+NDCG@100%: 0.46728001706965644
+NDCG@150%: 0.544142891244265
+ROC/AUC: 0.9999225166589184
+TN: 25808
+TP: 2667
+Precision: 0.9985024298071792
+Recall: 0.9999999962504686
+Threshold: 0.01870179202978181
+
+
+Trial 58
+
+Parameters: {'lr': 5.661086209118017e-05, 'dropout_rate': 0.24264582416084457, 'dim_feedforward': 34, 'batch': 16, 'encoder_layers': 1, 'decoder_layers': 1, 'activation_function': 'tanh', 'time_warping': True, 'time_masking': False, 'gaussian_noise': 0.08105931928232261, 'use_linear_embedding': False, 'phase_type': '2phase', 'self_conditioning': True, 'layer_norm': False, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 3}
+
+
+F1 Score: 0.9986829063094148
+Number of Parameters: 167,468
+Performance Metrics:
+FN: 3
+FP: 4
+Hit@100%: 0.38414380230121004
+Hit@150%: 0.5013056403663827
+NDCG@100%: 0.4088981077135068
+NDCG@150%: 0.4790415436638738
+ROC/AUC: 0.9993600869626305
+TN: 25808
+TP: 2664
+Precision: 0.9985007458826808
+Recall: 0.9988751368621104
+Threshold: 0.014853111785073685
+
+
+Trial 34
+
+Parameters: {'lr': 0.0001473468721649367, 'dropout_rate': 0.10874934511917145, 'dim_feedforward': 19, 'batch': 32, 'encoder_layers': 3, 'decoder_layers': 1, 'activation_function': 'tanh', 'time_warping': True, 'time_masking': True, 'gaussian_noise': 0.03708836585323916, 'use_linear_embedding': False, 'phase_type': 'iterative', 'self_conditioning': True, 'layer_norm': True, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 1}
+
+
+
+F1 Score: 0.9981188236746776
+Number of Parameters: 132,050
+Performance Metrics:
+FN: 7
+FP: 3
+Hit@100%: 0.3965349665393208
+Hit@150%: 0.5192096523648829
+NDCG@100%: 0.44154848400590885
+NDCG@150%: 0.5151619239867439
+ROC/AUC: 0.9986295515361836
+TN: 25809
+TP: 2660
+Precision: 0.9988734472441853
+Recall: 0.9973753243442994
+Threshold: 0.02251126727966907
+
+
+
+
+
+
+
+
+NAB:
+
+
+Number of finished trials:  150
+Best trials on the Pareto front:
+Trial Number: 115
+  Value for F1: 0.0
+  Number of Parameters: -265.0
+  Params: 
+    lr: 0.006923942021207653
+    dropout_rate: 0.4646036913331929
+    dim_feedforward: 10
+    batch: 48
+    encoder_layers: 2
+    decoder_layers: 1
+    activation_function: sigmoid
+    time_warping: False
+    time_masking: True
+    gaussian_noise: 0.023737789843217495
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: True
+    layer_norm: True
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 1
+Trial Number: 116
+  Value for F1: 0.9411711188269714
+  Number of Parameters: -285.0
+  Params: 
+    lr: 0.006923942021207653
+    dropout_rate: 0.4560425997043952
+    dim_feedforward: 10
+    batch: 96
+    encoder_layers: 1
+    decoder_layers: 2
+    activation_function: relu
+    time_warping: False
+    time_masking: True
+    gaussian_noise: 0.00011914591167736871
+    use_linear_embedding: True
+    phase_type: iterative
+    self_conditioning: True
+    layer_norm: False
+    positional_encoding_type: sinusoidal
+    num_ffn_layers: 1
+
+[I 2023-11-16 01:53:07,464] Trial 116 finished with values: [0.9411711188269714, 285.0] and parameters: {'lr': 0.006923942021207653, 'dropout_rate': 0.4560425997043952, 'dim_feedforward': 10, 'batch': 96, 'encoder_layers': 1, 'decoder_layers': 2, 'activation_function': 'relu', 'time_warping': False, 'time_masking': True, 'gaussian_noise': 0.00011914591167736871, 'use_linear_embedding': True, 'phase_type': 'iterative', 'self_conditioning': True, 'layer_norm': False, 'positional_encoding_type': 'sinusoidal', 'num_ffn_layers': 1}. 
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/transformer.py:282: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer was not TransformerEncoderLayer
+  warnings.warn(f"enable_nested_tensor is True, but self.use_nested_tensor is False because {why_not_sparsity_fast_path}")
+         f1  precision  recall    TP      TN   FP   FN   ROC/AUC  threshold
+0  0.941171   0.888889     1.0  24.0  4005.0  3.0  0.0  0.999626   0.020386
+{'FN': 0,
+ 'FP': 3,
+ 'Hit@100%': 1.0,
+ 'Hit@150%': 1.0,
+ 'ROC/AUC': 0.999625748502994,
+ 'TN': 4005,
+ 'TP': 24,
+ 'f1': 0.9411711188269714,
+ 'precision': 0.8888885596709039,
+ 'recall': 0.9999995833335069,
+ 'threshold': 0.020385676577839167}
+
+
+WADI:
+
+[127 rows x 9 columns]
+{'FN': 154,
+ 'FP': 39,
+ 'Hit@100%': nan,
+ 'Hit@150%': nan,
+ 'NDCG@100%': nan,
+ 'NDCG@150%': nan,
+ 'ROC/AUC': 0.8058624674469019,
+ 'TN': 16843,
+ 'TP': 245,
+ 'f1': 0.7174182540110129,
+ 'precision': 0.8626760259621118,
+ 'recall': 0.6140350723299481,
+ 'threshold': 0.09416824688028631}
+
+
+ [0.7174182540110129, 1701515.0] and parameters: {'lr': 0.0015406367696774947, 'dropout_rate': 0.28863840219073156, 'dim_feedforward': 24, 'batch': 128, 'encoder_layers': 2, 'decoder_layers': 1, 'activation_function': 'leaky_relu', 'time_warping': True, 'time_masking': False, 'gaussian_noise': 0.0010420486609326078, 'use_linear_embedding': True, 'phase_type': '2phase', 'self_conditioning': False, 'layer_norm': False, 'positional_encoding_type': 'sinusoidal', 'num_ffn_layers': 1}. 
+
+
+
+[127 rows x 9 columns]
+{'FN': 243,
+ 'FP': 63,
+ 'Hit@100%': nan,
+ 'Hit@150%': nan,
+ 'NDCG@100%': nan,
+ 'NDCG@150%': nan,
+ 'ROC/AUC': 0.6936228291377656,
+ 'TN': 16819,
+ 'TP': 156,
+ 'f1': 0.5048497768033153,
+ 'precision': 0.7123287345968614,
+ 'recall': 0.3909774338100894,
+ 'threshold': 0.3370805070807035}
+
+[I 2023-11-20 02:40:03,564] Trial 3 finished with values: [0.5048497768033153, 2847651.0] and parameters: {'lr': 1.1725628134067228e-05, 'dropout_rate': 0.4438157923983769, 'dim_feedforward': 73, 'batch': 32, 'encoder_layers': 2, 'decoder_layers': 2, 'activation_function': 'leaky_relu', 'time_warping': False, 'time_masking': True, 'gaussian_noise': 0.06282271609520405, 'use_linear_embedding': False, 'phase_type': '2phase', 'self_conditioning': False, 'layer_norm': False, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 1}.
+
+
+
+
+I 2023-11-20 11:16:35,667] Trial 4 finished with values: [0.6775795961703488, 1405659.0] and parameters: {'lr': 0.0015014784009291463, 'dropout_rate': 0.2533856564803001, 'dim_feedforward': 25, 'batch': 96, 'encoder_layers': 1, 'decoder_layers': 1, 'activation_function': 'sigmoid', 'time_warping': True, 'time_masking': True, 'gaussian_noise': 0.07806347925269448, 'use_linear_embedding': False, 'phase_type': '2phase', 'self_conditioning': False, 'layer_norm': False, 'positional_encoding_type': 'sinusoidal', 'num_ffn_layers': 2
+
+[127 rows x 9 columns]
+{'FN': 68,
+ 'FP': 247,
+ 'Hit@100%': nan,
+ 'Hit@150%': nan,
+ 'NDCG@100%': nan,
+ 'NDCG@150%': nan,
+ 'ROC/AUC': 0.9074714834711468,
+ 'TN': 16635,
+ 'TP': 331,
+ 'f1': 0.6775795961703488,
+ 'precision': 0.572664349953904,
+ 'recall': 0.8295739140457666,
+ 'threshold': 0.14413378473511254} 
+
+
+
+Trial 8 finished with values: [0.8152659173969986, 1752919.0] and parameters: {'lr': 1.3119607394380314e-05, 'dropout_rate': 0.2237956632124108, 'dim_feedforward': 16, 'batch': 112, 'encoder_layers': 2, 'decoder_layers': 1, 'activation_function': 'sigmoid', 'time_warping': False, 'time_masking': False, 'gaussian_noise': 0.0001943909464828892, 'use_linear_embedding': True, 'phase_type': '2phase', 'self_conditioning': True, 'layer_norm': True, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 3}.
+
+{'FN': 68,
+ 'FP': 82,
+ 'Hit@100%': nan,
+ 'Hit@150%': nan,
+ 'NDCG@100%': nan,
+ 'NDCG@150%': nan,
+ 'ROC/AUC': 0.9123583452173853,
+ 'TN': 16800,
+ 'TP': 331,
+ 'f1': 0.8152659173969986,
+ 'precision': 0.801452765097996,
+ 'recall': 0.8295739140457666,
+ 'threshold': 0.12110793074099424}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Params of Static Benchmarks Models on dataset
+
+NAB:
+LSTM-NDT : 17170
+TranAD: 615
+USAD : 1359
+GDN : 574
+CAE_M: 7229
+DAGMM: 1266
+MAD-GAN: 838
+OMNI-ANOMALY 13717
+MSCRED: 1237377
+
+
+SMAP:
+
+TranAD: 62271
+USAD: 7395
+GDN: 2974
+DAGMM: 7266
+OmniAnomaly : 16813
+MAD_GAN: 6718
+LSTM-AD: 29146
+CAE_M : 7229
+
+
+smd:
+
