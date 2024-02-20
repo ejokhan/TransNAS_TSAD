@@ -16,7 +16,7 @@ The preprocess_TransNAS_TSAD script is crucial for preparing your dataset for th
 # Additional Resources
 Pot_eval Function: Adapted and refined from TranAD, this function plays a key role in evaluating the model's performance.
 
-#Running the Demo
+# Running the Demo
 Adjust Data Paths: Ensure the DATA_PATH, OUTPUT_FOLDER, and other relevant paths in the notebook match your Colab directory structure.
 Install Dependencies: Follow the instructions in demo.ipynb to install required libraries.
 Run the Notebook: Execute the cells sequentially to train and evaluate the model.
@@ -32,6 +32,16 @@ This project owes its inspiration to the TranAD paper, from which certain prepro
 ![Result 1](https://github.com/ejokhan/TransNAS_TSAD/assets/19641451/0af6902f-6f02-4703-b816-4001875078e3)
 ![Pareto results](https://github.com/ejokhan/TransNAS_TSAD/assets/19641451/97d3b736-4fdd-4909-b814-dfbe207d016d)
 
+# Cite this work as (Looking for Journal to sumbit)
+
+@misc{haq2023transnastsad,
+      title={TransNAS-TSAD: Harnessing Transformers for Multi-Objective Neural Architecture Search in Time Series Anomaly Detection}, 
+      author={Ijaz Ul Haq and Byung Suk Lee},
+      year={2023},
+      eprint={2311.18061},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
 
 # Conclusion
 TransNAS_TSAD represents a significant leap forward in the field of time-series anomaly detection. By leveraging the strengths of NAS and transformer models, it offers a sophisticated tool for researchers and practitioners alike. Explore the demo.ipynb to witness the power of TransNAS_TSAD firsthand.
