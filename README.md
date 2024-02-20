@@ -1,10 +1,10 @@
-#TransNAS_TSAD: A NAS-Enhanced Transformer for Time-Series Anomaly Detection
+# TransNAS_TSAD: A NAS-Enhanced Transformer for Time-Series Anomaly Detection
 TransNAS_TSAD innovatively combines transformer models with Neural Architecture Search (NAS) to set a new standard in time-series anomaly detection. Building upon the foundation laid by TranAD, this project pushes the boundaries by optimizing both performance and model complexity across a variety of datasets.
 
-#Getting Started with the Demo
+# Getting Started with the Demo
 The provided Jupyter Notebook (demo_TransNAS_TSAD.ipynb) is the perfect starting point for experiencing TransNAS_TSAD on Google Colab. It's designed to guide you through the process of setting up, running the model, and interpreting results.
 
-#Prerequisites
+# Prerequisites
 Before diving into the demo, please ensure:
 All necessary files are placed according to the data path structure mentioned.
 
@@ -13,7 +13,7 @@ Libraries needed for execution are listed within the demo.ipynb. Please install 
 Data Preprocessing
 The preprocess_TransNAS_TSAD script is crucial for preparing your dataset for the model. This preprocessing functionality, inspired by the TranAD project, is tailored for optimal compatibility with TransNAS_TSAD. Adjust the paths in your Colab environment to align with the structure provided in the repository for seamless operation.
 
-#Additional Resources
+# Additional Resources
 Pot_eval Function: Adapted and refined from TranAD, this function plays a key role in evaluating the model's performance.
 
 #Running the Demo
@@ -33,5 +33,5 @@ This project owes its inspiration to the TranAD paper, from which certain prepro
 ![Pareto results](https://github.com/ejokhan/TransNAS_TSAD/assets/19641451/97d3b736-4fdd-4909-b814-dfbe207d016d)
 
 
-#Conclusion
+# Conclusion
 TransNAS_TSAD represents a significant leap forward in the field of time-series anomaly detection. By leveraging the strengths of NAS and transformer models, it offers a sophisticated tool for researchers and practitioners alike. Explore the demo.ipynb to witness the power of TransNAS_TSAD firsthand.
