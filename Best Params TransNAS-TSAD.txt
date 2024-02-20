@@ -1,4 +1,9 @@
-SMAP:  Trial 3 finished with values: [0.9189139405275458, -375555.0] and parameters: {'lr': 1.4109443283462657e-05, 'dropout_rate': 0.1755720259905254, 'dim_feedforward': 95, 'batch': 16, 'encoder_layers': 2, 'decoder_layers': 3, 'activation_function': 'sigmoid', 'time_warping': True, 'time_masking': False, 'gaussian_noise': 0.0004472580884683208, 'use_linear_embedding': False, 'phase_type': '2phase', 'self_conditioning': True, 'layer_norm': False, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 3}. 
+Some best model parameters obtained for each dataset in the experiment 
+
+
+SMAP :
+
+Trial 3 finished with values: [0.9189139405275458, -375555.0] and parameters: {'lr': 1.4109443283462657e-05, 'dropout_rate': 0.1755720259905254, 'dim_feedforward': 95, 'batch': 16, 'encoder_layers': 2, 'decoder_layers': 3, 'activation_function': 'sigmoid', 'time_warping': True, 'time_masking': False, 'gaussian_noise': 0.0004472580884683208, 'use_linear_embedding': False, 'phase_type': '2phase', 'self_conditioning': True, 'layer_norm': False, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 3}. 
 Trial Number: 7 (Trial 7 finished with values: [0.9326633402421077, 78306.0] and parameters: {'lr': 0.003151456826123189, 'dropout_rate': 0.4305067365468159, 'dim_feedforward': 77, 'batch': 64, 'encoder_layers': 1, 'decoder_layers': 2, 'activation_function': 'leaky_relu', 'time_warping': True, 'time_masking': False, 'gaussian_noise': 0.0025879066400618603, 'use_linear_embedding': True, 'phase_type': 'iterative', 'self_conditioning': False, 'layer_norm': False, 'positional_encoding_type': 'fourier', 'num_ffn_layers': 1}. 
 
 )
@@ -1168,31 +1173,4 @@ Trial 8 finished with values: [0.8152659173969986, 1752919.0] and parameters: {'
 
 
 
-Params of Static Benchmarks Models on dataset
-
-NAB:
-LSTM-NDT : 17170
-TranAD: 615
-USAD : 1359
-GDN : 574
-CAE_M: 7229
-DAGMM: 1266
-MAD-GAN: 838
-OMNI-ANOMALY 13717
-MSCRED: 1237377
-
-
-SMAP:
-
-TranAD: 62271
-USAD: 7395
-GDN: 2974
-DAGMM: 7266
-OmniAnomaly : 16813
-MAD_GAN: 6718
-LSTM-AD: 29146
-CAE_M : 7229
-
-
-smd:
 
