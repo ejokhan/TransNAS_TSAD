@@ -25,8 +25,6 @@ This project owes its inspiration to the TranAD paper, from which certain prepro
 
 ![Training-testing](https://github.com/ejokhan/TransNAS_TSAD/assets/19641451/5d4c2f29-396b-47bb-a4fb-293abe756d18)
 ![Testing result](https://github.com/ejokhan/TransNAS_TSAD/assets/19641451/fa9f817b-1bf9-4441-b6c5-091ebca8c776)
-![Result 2](https://github.com/ejokhan/TransNAS_TSAD/assets/19641451/9e2148e8-9ed3-400e-aba8-52d9b5625d88)
-![Result 1](https://github.com/ejokhan/TransNAS_TSAD/assets/19641451/0af6902f-6f02-4703-b816-4001875078e3)
 ![Pareto results](https://github.com/ejokhan/TransNAS_TSAD/assets/19641451/97d3b736-4fdd-4909-b814-dfbe207d016d)
 
 # Cite this work as (Looking for Journal to sumbit)
