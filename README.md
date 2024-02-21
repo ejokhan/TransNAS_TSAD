@@ -38,5 +38,3 @@ This project owes its inspiration to the TranAD paper, from which certain prepro
       primaryClass={cs.LG}
 }
 
-# Conclusion
-TransNAS_TSAD represents a significant leap forward in the field of time-series anomaly detection. By leveraging the strengths of NAS and transformer models, it offers a sophisticated tool for researchers and practitioners alike. Explore the demo.ipynb to witness the power of TransNAS_TSAD firsthand.
