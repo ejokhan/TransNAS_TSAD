@@ -116,35 +116,54 @@ def bf_search(score, label, start, end=None, step_num=1, display_freq=1, verbose
     return m, m_t
 
 
+def calculate_mat(scores, window_size):
+    """
+    Calculate the Moving Average Threshold (MAT) for anomaly scores.
+    """
+    if window_size < 1:
+        raise ValueError("Window size must be at least 1.")
+    return np.convolve(scores, np.ones(window_size) / window_size, mode='same')
+
+def calculate_rolling_stats(scores, window_size):
+    """
+    Calculate rolling mean and standard deviation for anomaly scores.
+    """
+    if window_size < 1:
+        raise ValueError("Window size must be at least 1.")
+    mean = np.convolve(scores, np.ones(window_size) / window_size, mode='same')
+    squared_diffs = (scores - mean) ** 2
+    rolling_std = np.sqrt(np.convolve(squared_diffs, np.ones(window_size) / window_size, mode='same'))
+    return mean, rolling_std
+
 
 import time
 import numpy as np
 
-def pot_eval(trial_timeout,init_score, score, label, q=1e-5, level=0.02):
+import time
+import numpy as np
+from src.spot import SPOT  # Ensure SPOT is imported correctly from your project structure
+
+def pot_eval(config, trial_timeout, init_score, score, label, q=1e-5, level=0.02, window_size=10):
     """
-    Performs the Peak Over Threshold (POT) method on given anomaly scores to evaluate the detection performance.
+    Performs the Peak Over Threshold (POT) method on given anomaly scores to evaluate the detection performance,
+    enhanced with Moving Average Threshold (MAT) and rolling statistics for nuanced detection.
 
     Args:
-        init_score: Initial anomaly score.
-        score: Array of anomaly scores.
-        label: Array of binary labels (0 for normal, 1 for anomaly).
+        config: Configuration dictionary containing dataset and model information.
+        trial_timeout: Timeout limit in seconds for the POT method initialization.
+        init_score: Initial anomaly scores of the training set used to initialize the threshold.
+        score: Anomaly scores of the test set to evaluate.
+        label: True labels of the test set.
         q: Quantile level for threshold selection.
         level: Significance level for the test.
-        trail
-
-    Args:
-        init_score (np.ndarray): Anomaly scores of the training set used to initialize the threshold.
-        score (np.ndarray): Anomaly scores of the test set to evaluate.
-        label (np.ndarray): True labels of the test set.
-        q (float): Detection level (risk), lower q means higher sensitivity to anomalies.
-        level (float): Probability associated with the initial threshold, determining its strictness.
+        window_size: Window size for calculating MAT and rolling statistics.
 
     Returns:
-        dict: A dictionary containing various evaluation metrics (F1 score, precision, recall, etc.).
-        np.array: Array of predictions based on the POT method.
+        A dictionary containing various evaluation metrics (F1 score, precision, recall, etc.),
+        and an array of predictions based on the POT method with augmentative strategies.
     """
 
-    # Dataset-specific parameters for initializing the POT method (Same as in the TranAD paper)
+    # Dataset-specific parameters for initializing the POT method
     lm_d = {
         'SMD': [(0.99995, 1.04), (0.99995, 1.06)],
         'synthetic': [(0.999, 1), (0.999, 1)],
@@ -157,36 +176,41 @@ def pot_eval(trial_timeout,init_score, score, label, q=1e-5, level=0.02):
         'MSDS': [(0.91, 1), (0.9, 1.04)],
         'MBA': [(0.87, 1), (0.93, 1.04)],
     }
-
-    # Select parameters based on the current dataset and model configuration
     index = 1 if 'TransNAS_TSAD' in config.model else 0
     lm = lm_d[config.dataset][index]
-    print(lm)  # Debugging print to check the selected parameters
     lms = lm[0]
 
-    start_time = time.time()  # Start timing for potential timeout handling
-    timeout = trial_timeout  # Timeout limit in seconds
+    start_time = time.time()
 
     while True:
         try:
-            s = SPOT(q)  # Initialize SPOT object with the specified detection level
-            s.fit(init_score, score)  # Import data into the SPOT model
-            # Initialize SPOT model with specified level and configuration
+            s = SPOT(q)
+            s.fit(init_score, score)
             s.initialize(level=lms, min_extrema=False, verbose=False)
         except Exception as e:
             elapsed_time = time.time() - start_time
             if elapsed_time > timeout:
-                print(f"Initialization timed out after {timeout} seconds. Last exception message: {e}")
-                break
-            lms *= 0.999  # Slightly adjust the level and try again
+                print(f"Initialization timed out after {trial_timeout} seconds. Last exception message: {e}")
+                return {}, np.array([])
+            lms *= 0.999
         else:
-            break  # Break the loop if initialization succeeds
+            break
 
-    ret = s.run(dynamic=False)  # Execute the POT method
-    pot_th = np.mean(ret['thresholds']) * lm[1]  # Calculate the threshold based on POT results
+    ret = s.run(dynamic=False)
+    pot_th = np.mean(ret['thresholds']) * lm[1]
 
-    # Adjust predictions based on the calculated threshold
-    pred, p_latency = adjust_predicts(score, label, pot_th, calc_latency=True)
+    # Calculate MAT
+    mat_scores = np.convolve(score, np.ones(window_size) / window_size, mode='same')
+
+    # Calculate rolling statistics
+    mean, rolling_std = np.convolve(score, np.ones(window_size) / window_size, mode='same'), \
+                         np.sqrt(np.convolve((score - np.convolve(score, np.ones(window_size) / window_size, mode='same')) ** 2, np.ones(window_size) / window_size, mode='same'))
+
+    # Example logic for dynamic threshold adjustment
+    dynamic_threshold = pot_th + np.mean(mat_scores - mean) / np.mean(rolling_std) * level
+
+    # Adjust predictions based on the calculated dynamic threshold
+    pred, p_latency = adjust_predicts(score, label, dynamic_threshold, calc_latency=True)
 
     # Calculate evaluation metrics
     p_t = calc_point2point(pred, label)
@@ -201,5 +225,43 @@ def pot_eval(trial_timeout,init_score, score, label, q=1e-5, level=0.02):
         'FP': p_t[5],
         'FN': p_t[6],
         'ROC/AUC': p_t[7],
-        'threshold': pot_th,
+        'threshold': dynamic_threshold,
     }, np.array(pred)
+
+
+import numpy as np
+from sklearn.metrics import ndcg_score
+
+
+def hit_att(ascore, labels, ps = [100, 150]):
+	res = {}
+	for p in ps:
+		hit_score = []
+		for i in range(ascore.shape[0]):
+			a, l = ascore[i], labels[i]
+			a, l = np.argsort(a).tolist()[::-1], set(np.where(l == 1)[0])
+			if l:
+				size = round(p * len(l) / 100)
+				a_p = set(a[:size])
+				intersect = a_p.intersection(l)
+				hit = len(intersect) / len(l)
+				hit_score.append(hit)
+		res[f'Hit@{p}%'] = np.mean(hit_score)
+	return res
+
+def ndcg(ascore, labels, ps = [100, 150]):
+	res = {}
+	for p in ps:
+		ndcg_scores = []
+		for i in range(ascore.shape[0]):
+			a, l = ascore[i], labels[i]
+			labs = list(np.where(l == 1)[0])
+			if labs:
+				k_p = round(p * len(labs) / 100)
+				try:
+					hit = ndcg_score(l.reshape(1, -1), a.reshape(1, -1), k = k_p)
+				except Exception as e:
+					return {}
+				ndcg_scores.append(hit)
+		res[f'NDCG@{p}%'] = np.mean(ndcg_scores)
+	return res
