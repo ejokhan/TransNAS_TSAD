@@ -165,14 +165,12 @@ def pot_eval(config, trial_timeout, init_score, score, label, q=1e-5, level=0.02
     # Dataset-specific parameters for initializing the POT method
     lm_d = {
         'SMD': [(0.99995, 1.04), (0.99995, 1.06)],
-        'synthetic': [(0.999, 1), (0.999, 1)],
         'SWaT': [(0.993, 1), (0.993, 1)],
         'UCR': [(0.993, 1), (0.99935, 1)],
         'NAB': [(0.991, 1), (0.99, 1)],
         'SMAP': [(0.99, 1), (0.99, 1)],
         'MSL': [(0.97, 1), (0.999, 1.04)],
         'WADI': [(0.99, 1), (0.999, 1)],
-        'MSDS': [(0.91, 1), (0.9, 1.04)],
         'MBA': [(0.87, 1), (0.93, 1.04)],
     }
     index = 1 if 'TransNAS_TSAD' in config.model else 0
