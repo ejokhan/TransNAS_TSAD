@@ -11,9 +11,10 @@ from time import time
 from pprint import pprint
 import os
 import torch
+import numpy as np
 # from beepy import beep
 
-def convert_to_windows(data, model):
+def convert_to_windows(data, model,config):
 	windows = []; w_size = model.n_window
 	for i, g in enumerate(data):
 		if i >= w_size: w = data[i-w_size:i]
@@ -21,8 +22,8 @@ def convert_to_windows(data, model):
 		windows.append(w if 'TransNAS_TSAD' in config.model else w.view(-1))
 	return torch.stack(windows)
 
-def save_model(model, optimizer, scheduler, epoch, accuracy_list):
-	folder = f'NAS_checkpoints/{config.model}_{config.dataset}/'
+def save_model(model, optimizer, scheduler, epoch, accuracy_list,config):
+	folder = f'TransNAS_checkpoints/{config.model}_{config.dataset}/'
 	os.makedirs(folder, exist_ok=True)
 	file_path = f'{folder}/model.ckpt'
 	torch.save({
@@ -34,7 +35,7 @@ def save_model(model, optimizer, scheduler, epoch, accuracy_list):
  
 
 
-def load_model(modelname, dims, **kwargs):
+def load_model(modelname, dims,config, **kwargs):
     """
     Loads or initializes a model along with its optimizer and scheduler based on provided hyperparameters.
 
@@ -60,7 +61,7 @@ def load_model(modelname, dims, **kwargs):
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, 15, 0.9)
 
     # Define the filename for saving/loading the model checkpoint
-    fname = f'NAS_checkpoints/{config.model}_{config.dataset}/model.ckpt'
+    fname = f'TransNAS_checkpoints/{config.model}_{config.dataset}/model.ckpt'
 
     # Load the model and optimizer states if a checkpoint exists and retraining/testing is not explicitly requested
     if os.path.exists(fname) and (not config.retrain or config.test):
@@ -80,8 +81,8 @@ def load_model(modelname, dims, **kwargs):
     return model, optimizer, scheduler, epoch, accuracy_list
 
 
-def load_dataset(dataset):
-	folder = os.path.join(OUTPUT_FOLDER, dataset)
+def load_dataset(path,dataset,config):
+	folder = os.path.join(path, dataset)
 	if not os.path.exists(folder):
 		raise Exception('Processed Data not found.')
 	loader = []
@@ -93,13 +94,13 @@ def load_dataset(dataset):
 		if dataset == 'NAB': file = 'ec2_request_latency_system_failure_' + file
 		loader.append(np.load(os.path.join(folder, f'{file}.npy')))
 	# loader = [i[:, debug:debug+1] for i in loader]
-	if config.less: loader[0] = cut_array(0.2, loader[0])
+	#if config.less: loader[0] = cut_array(0.2, loader[0])
 	train_loader = DataLoader(loader[0], batch_size=loader[0].shape[0])
 	test_loader = DataLoader(loader[1], batch_size=loader[1].shape[0])
 	labels = loader[2]
 	return train_loader, test_loader, labels
 
-def optimize_model(epoch, model, data, dataO, optimizer, scheduler, training=True):
+def optimize_model(epoch, model, data, dataO, optimizer, scheduler,config, training=True):
     """
     This function optimizes a given model for a single epoch, either in training or evaluation mode.
 
