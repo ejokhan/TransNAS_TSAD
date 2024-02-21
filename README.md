@@ -13,9 +13,6 @@ Libraries needed for execution are listed within the demo.ipynb. Please install 
 Data Preprocessing
 The preprocess_TransNAS_TSAD script is crucial for preparing your dataset for the model. This preprocessing functionality, inspired by the TranAD project, is tailored for optimal compatibility with TransNAS_TSAD. Adjust the paths in your Colab environment to align with the structure provided in the repository for seamless operation.
 
-# Additional Resources
-Pot_eval Function: Adapted and refined from TranAD, this function plays a key role in evaluating the model's performance.
-
 # Running the Demo
 Adjust Data Paths: Ensure the DATA_PATH, OUTPUT_FOLDER, and other relevant paths in the notebook match your Colab directory structure.
 Install Dependencies: Follow the instructions in demo.ipynb to install required libraries.
