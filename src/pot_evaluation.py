@@ -3,6 +3,8 @@ import numpy as np
 from src.spot import SPOT
 
 from sklearn.metrics import *
+import time
+import numpy as np
 
 def calc_point2point(predict, actual):
     """
@@ -136,11 +138,8 @@ def calculate_rolling_stats(scores, window_size):
     return mean, rolling_std
 
 
-import time
-import numpy as np
 
-import time
-import numpy as np
+
 from src.spot import SPOT  # Ensure SPOT is imported correctly from your project structure
 
 def pot_eval(config, trial_timeout, init_score, score, label, q=1e-5, level=0.02, window_size=10):
