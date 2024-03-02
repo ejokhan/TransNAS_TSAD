@@ -178,20 +178,22 @@ def pot_eval(config, trial_timeout, init_score, score, label, q=1e-5, level=0.02
     lms = lm[0]
 
     start_time = time.time()
-
+    timeout = trial_timeout
+    
     while True:
         try:
-            s = SPOT(q)
-            s.fit(init_score, score)
+            s = SPOT(q)  # Initialize SPOT object with the specified detection level
+            s.fit(init_score, score)  # Import data into the SPOT model
+            # Initialize SPOT model with specified level and configuration
             s.initialize(level=lms, min_extrema=False, verbose=False)
         except Exception as e:
             elapsed_time = time.time() - start_time
             if elapsed_time > timeout:
-                print(f"Initialization timed out after {trial_timeout} seconds. Last exception message: {e}")
-                return {}, np.array([])
-            lms *= 0.999
+                print(f"Initialization timed out after {timeout} seconds. Last exception message: {e}")
+                break
+            lms *= 0.999  # Slightly adjust the level and try again
         else:
-            break
+            break  # Break the loop if initialization succeeds
 
     ret = s.run(dynamic=False)
     pot_th = np.mean(ret['thresholds']) * lm[1]
