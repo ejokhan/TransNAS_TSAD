@@ -1,5 +1,5 @@
 # TransNAS_TSAD: A NAS-Enhanced Transformer for Time-Series Anomaly Detection
-TransNAS_TSAD innovatively combines transformer models with Neural Architecture Search (NAS) to set a new standard in time-series anomaly detection. Building upon the foundation laid by TranAD, this project pushes the boundaries by optimizing both performance and model complexity across a variety of datasets.
+TransNAS-TSAD integrates transformer models with Neural Architecture Search (NAS) to enhance time-series anomaly detection. Drawing from the methodologies established by TranAD, this framework extends capabilities by simultaneously refining performance and model complexity for diverse datasets.
 
 # Getting Started with the Demo
 The provided Jupyter Notebook (demo_TransNAS_TSAD.ipynb) is the perfect starting point for experiencing TransNAS_TSAD on Google Colab. It's designed to guide you through the process of setting up, running the model, and interpreting results.
